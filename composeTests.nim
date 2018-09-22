@@ -18,10 +18,10 @@ suite "Compose Tests":
 
     test "it should compose functions":
         let res = compose[int](
-            addOne,
+            @[addOne,
             multiplyTwo,
             subtractThree,
-            addFour,
+            addFour]
         )(0)
 
         check(res == 3)
